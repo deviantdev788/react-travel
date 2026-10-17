@@ -38,6 +38,8 @@ jobs:
 
       - name: Build React application
         run: npm run build
+  env:
+    VITE_APP_BASEURL: https://desktop-vl22pb4.tail480b34.ts.net        
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6
