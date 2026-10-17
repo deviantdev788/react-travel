@@ -7,7 +7,7 @@ import Cookies from 'js-cookie';
 const Api = axios.create({
     
     //set endpoint API
-    baseURL: import.meta.env.VITE_APP_BASEURL,
+    baseURL: import.meta.env.VITE_APP_URL,
 
     //set header axios
     headers: {
