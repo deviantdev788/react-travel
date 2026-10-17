@@ -40,7 +40,12 @@ jobs:
         run: npm run build
         env: 
           VITE_APP_BASEURL: https://desktop-vl22pb4.tail480b34.ts.net
-        
+
+      - name: Verify production API URL
+        run: |
+          echo "Checking built JavaScript for API URLs"
+          grep -R -o -E 'https?[^" ]*(tail480b34|deviantdev)[^" ]*' dist/assets || true
+          
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6
 
